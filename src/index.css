@@ -103,3 +103,43 @@ tr:last-child td{border-bottom:none}
   .resp-p{padding:1rem!important}
   .resp-title{font-size:clamp(1.2rem,5vw,1.5rem)!important}
 }
+
+/* ── Lab page responsive ───────────────────── */
+.lab-grid{display:grid;grid-template-columns:220px 1fr;gap:1.2rem;align-items:start}
+.mob-lab-detail{display:none}
+.mob-only{display:none}
+
+@media(max-width:767px){
+  .lab-grid{grid-template-columns:1fr!important}
+  .lab-sidebar{display:none!important}
+  .lab-content{display:block}
+  .mob-lab-detail{display:block}
+  /* When detail is open, hide the grid */
+  .mob-lab-detail ~ .lab-grid{display:none!important}
+}
+
+/* ── Theory page mobile ─────────────────────── */
+@media(max-width:767px){
+  .theory-grid{grid-template-columns:1fr!important}
+  .theory-sidebar-desktop{display:none!important}
+  .theory-chap-scroll{
+    display:flex!important;overflow-x:auto;gap:.3rem;
+    padding-bottom:.5rem;scrollbar-width:none;
+    -webkit-overflow-scrolling:touch;
+    margin-bottom:.75rem;
+  }
+  .theory-chap-scroll::-webkit-scrollbar{display:none}
+  .theory-chap-btn{flex-shrink:0!important;white-space:nowrap!important}
+}
+@media(min-width:768px){
+  .theory-chap-scroll{display:none!important}
+}
+
+/* ── General mobile helpers ─────────────────── */
+@media(max-width:767px){
+  .mob-hide{display:none!important}
+  .resp-1col{grid-template-columns:1fr!important}
+  pre{font-size:.74rem!important}
+  table{font-size:.76rem!important}
+  th,td{padding:.45rem .6rem!important}
+}
