@@ -75,7 +75,7 @@ export default function TopoPage() {
 
   return (
     <div>
-      <PageHdr icon="" title="Topology Mạng" sub="Trực quan hóa 4 topology phổ biến trong Mininet"/>
+      <PageHdr icon="🗺️" title="Topology Mạng" sub="Trực quan hóa 4 topology phổ biến trong Mininet"/>
 
       {/* Legend */}
       <div className="card" style={{padding:'.7rem 1.1rem',marginBottom:'1.3rem',display:'flex',gap:'1.5rem',flexWrap:'wrap',alignItems:'center'}}>

@@ -70,7 +70,7 @@ function LabDetail({ lab, onBack, onDone, isDone }) {
       </div>
 
       <div className="tabs">
-        {[{id:'steps',label:' Các bước'},{id:'theory',label:'📖 Lý thuyết'},{id:'verify',label:'✅ Kiểm tra'}].map(t=>(
+        {[{id:'steps',label:'📋 Các bước'},{id:'theory',label:'📖 Lý thuyết'},{id:'verify',label:'✅ Kiểm tra'}].map(t=>(
           <button key={t.id} className={`tab ${tab===t.id?'active':''}`} onClick={()=>setTab(t.id)}>{t.label}</button>
         ))}
       </div>
@@ -133,7 +133,7 @@ function LabDetail({ lab, onBack, onDone, isDone }) {
       {tab==='theory'&&(
         <div className="card" style={{padding:'1.2rem'}}>
           <div className="alert ai" style={{marginBottom:'1rem'}}>
-            <strong> Kiến thức nền:</strong> {lab.theory}
+            <strong>📚 Kiến thức nền:</strong> {lab.theory}
           </div>
           <p style={{color:'var(--txt3)',fontSize:'.83rem',lineHeight:1.65}}>
             Lab thuộc nhóm <strong style={{color:gc}}>{lab.group}</strong>,
@@ -147,7 +147,7 @@ function LabDetail({ lab, onBack, onDone, isDone }) {
         <div>
           <div className="card" style={{padding:'1.2rem',marginBottom:'.75rem'}}>
             <div style={{fontWeight:700,color:'var(--acc)',marginBottom:'1rem',fontSize:'.9rem'}}>
-               Câu hỏi kiểm tra
+              🔍 Câu hỏi kiểm tra
             </div>
             {lab.verify?.map((v,i)=>(
               <div key={i} style={{background:'var(--bg)',borderRadius:8,padding:'.75rem 1rem',marginBottom:'.55rem',border:'1px solid var(--brd)'}}>

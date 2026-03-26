@@ -52,7 +52,7 @@ export default function Projects() {
 
   return (
     <div className="fu">
-      <PageHdr icon="" title="Đề tài / Dự án" sub="9 đề tài từ cơ bản đến nâng cao — thực hành SDN thực tế"/>
+      <PageHdr icon="🚀" title="Đề tài / Dự án" sub="9 đề tài từ cơ bản đến nâng cao — thực hành SDN thực tế"/>
       <div className="tabs" style={{marginBottom:'1rem'}}>
         {TABS.map(t => <button key={t} className={`tab${tab===t?' active':''}`} onClick={() => setTab(t)}>{t}</button>)}
       </div>

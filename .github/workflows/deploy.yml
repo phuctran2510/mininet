@@ -21,14 +21,17 @@ jobs:
       - name: Install
         run: npm install
 
-      - name: Build for GitHub Pages
-        run: npm run build
-        env:
-          VITE_BASE: /mininet/
+      - name: Build for GitHub Pages (/mininet/)
+        run: npm run build:gh
 
-      - run: touch ./dist/.nojekyll
+      - name: Add .nojekyll
+        run: touch ./dist/.nojekyll
 
-      - uses: peaceiris/actions-gh-pages@v4
+      - name: Verify build
+        run: cat ./dist/index.html
+
+      - name: Deploy to gh-pages
+        uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist

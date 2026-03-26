@@ -12,7 +12,7 @@ export default function Glossary() {
 
   return (
     <div className="fu">
-      <PageHdr icon="" title="Thuật ngữ SDN" sub={`${glossary.length} thuật ngữ — từ điển kỹ thuật SDN/Mininet`}/>
+      <PageHdr icon="📚" title="Thuật ngữ SDN" sub={`${glossary.length} thuật ngữ — từ điển kỹ thuật SDN/Mininet`}/>
       <div style={{position:'relative',marginBottom:'1.2rem'}}>
         <input
           value={q} onChange={e => setQ(e.target.value)}

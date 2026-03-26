@@ -11,7 +11,7 @@ export function Projects() {
 
   return (
     <div>
-      <PageHdr icon="" title="Dự án Thực tế" sub="9 đề tài từ cơ bản đến nâng cao — sẵn sàng deploy GitHub"/>
+      <PageHdr icon="🚀" title="Dự án Thực tế" sub="9 đề tài từ cơ bản đến nâng cao — sẵn sàng deploy GitHub"/>
       <div style={{display:'flex',gap:'.5rem',marginBottom:'1.3rem',flexWrap:'wrap'}}>
         {levels.map(l=>(
           <button key={l} className={`btn ${f===l?'bp':'bg'}`}

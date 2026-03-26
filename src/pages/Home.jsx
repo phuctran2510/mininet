@@ -3,12 +3,12 @@ import { chapters, instructor, projects } from '../data'
 import { Stat } from '../components/UI'
 
 const QUICK = [
-  { to:'/theory', icon:'', label:'Lý thuyết', desc:'10 chương từ SDN cơ bản', color:'var(--acc)' },
-  { to:'/lab',    icon:'', label:'Lab',       desc:'Hướng dẫn thực hành từng bước', color:'var(--grn)' },
-  { to:'/quiz',   icon:'', label:'Trắc nghiệm',desc:'Luyện tập & kiểm tra',   color:'var(--org)' },
-  { to:'/exam',   icon:'', label:'Đề thi',    desc:'3 dạng đề mẫu',           color:'var(--pur)' },
-  { to:'/projects',icon:'',label:'Đề tài',    desc:'9 dự án thực tế',         color:'var(--yel)' },
-  { to:'/topology',icon:'',label:'Topology',  desc:'4 sơ đồ mạng tương tác',  color:'#ff5370'    },
+  { to:'/theory', icon:'📖', label:'Lý thuyết', desc:'10 chương từ SDN cơ bản', color:'var(--acc)' },
+  { to:'/lab',    icon:'🧪', label:'Lab',       desc:'Hướng dẫn thực hành từng bước', color:'var(--grn)' },
+  { to:'/quiz',   icon:'❓', label:'Trắc nghiệm',desc:'Luyện tập & kiểm tra',   color:'var(--org)' },
+  { to:'/exam',   icon:'📝', label:'Đề thi',    desc:'3 dạng đề mẫu',           color:'var(--pur)' },
+  { to:'/projects',icon:'🚀',label:'Đề tài',    desc:'9 dự án thực tế',         color:'var(--yel)' },
+  { to:'/topology',icon:'🗺️',label:'Topology',  desc:'4 sơ đồ mạng tương tác',  color:'#ff5370'    },
 ]
 
 export default function Home() {
@@ -40,20 +40,20 @@ export default function Home() {
         </p>
 
         <div style={{display:'flex',gap:'.6rem',justifyContent:'center',flexWrap:'wrap'}}>
-          <Link to="/theory" className="btn bp"> Bắt đầu học</Link>
-          <Link to="/lab"    className="btn bo"> Lab thực hành</Link>
-          <Link to="/quiz"   className="btn bg"> Luyện trắc nghiệm</Link>
+          <Link to="/theory" className="btn bp">📖 Bắt đầu học</Link>
+          <Link to="/lab"    className="btn bo">🧪 Lab thực hành</Link>
+          <Link to="/quiz"   className="btn bg">❓ Luyện trắc nghiệm</Link>
         </div>
       </div>
 
       {/* Stats */}
       <div className="fu d1" style={{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(100px,1fr))',gap:'.65rem',marginBottom:'2rem'}}>
-        <Stat icon="" val={chapters.length}  lbl="Chương học"/>
-        <Stat icon="" val="6+"               lbl="Lab hướng dẫn"  col="var(--grn)"/>
-        <Stat icon="" val={totalQuiz}         lbl="Câu trắc nghiệm" col="var(--org)"/>
-        <Stat icon="" val={totalEx}           lbl="Bài tập"        col="var(--pur)"/>
-        <Stat icon="" val={projects.length}   lbl="Đề tài dự án"   col="var(--yel)"/>
-        <Stat icon="" val="25"               lbl="Thuật ngữ"       col="var(--red)"/>
+        <Stat icon="📖" val={chapters.length}  lbl="Chương học"/>
+        <Stat icon="🧪" val="6+"               lbl="Lab hướng dẫn"  col="var(--grn)"/>
+        <Stat icon="❓" val={totalQuiz}         lbl="Câu trắc nghiệm" col="var(--org)"/>
+        <Stat icon="✏️" val={totalEx}           lbl="Bài tập"        col="var(--pur)"/>
+        <Stat icon="🚀" val={projects.length}   lbl="Đề tài dự án"   col="var(--yel)"/>
+        <Stat icon="📚" val="25"               lbl="Thuật ngữ"       col="var(--red)"/>
       </div>
 
       {/* Quick access */}
