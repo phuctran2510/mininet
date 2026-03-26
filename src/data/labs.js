@@ -406,7 +406,7 @@ for src in 1 2 3; do
   for dst in 1 2 3; do
     if [ $src != $dst ]; then
       sudo ovs-ofctl add-flow s1 \
-        "priority=5,dl_dst=00:00:00:00:00:0${dst},actions=output:${dst}"
+        "priority=5,dl_dst=00:00:00:00:00:0\${dst},actions=output:\${dst}"
     fi
   done
 done
