@@ -40,7 +40,7 @@ export default function Contact() {
             <ul className="ul">
               <li>phuctv@dlu.edu.vn</li>
               <li>0976353605</li>
-              <li>Nhà A7 – Khoa CNTT</li>
+              <li>Tòa Nhà A7 – Khoa CNTT</li>
             </ul>
           </div>
           <div className="alert ai" style={{margin:0}}>
