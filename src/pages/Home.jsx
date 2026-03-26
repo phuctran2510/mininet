@@ -40,9 +40,9 @@ export default function Home() {
         </p>
 
         <div style={{display:'flex',gap:'.6rem',justifyContent:'center',flexWrap:'wrap'}}>
-          <Link to="/theory" className="btn bp">📖 Bắt đầu học</Link>
-          <Link to="/lab"    className="btn bo">🧪 Lab thực hành</Link>
-          <Link to="/quiz"   className="btn bg">❓ Luyện trắc nghiệm</Link>
+          <Link to="/theory" className="btn bp"> Bắt đầu học</Link>
+          <Link to="/lab"    className="btn bo"> Lab thực hành</Link>
+          <Link to="/quiz"   className="btn bg"> Luyện trắc nghiệm</Link>
         </div>
       </div>
 
