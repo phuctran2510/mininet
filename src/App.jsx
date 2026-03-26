@@ -15,7 +15,7 @@ import Contact from './pages/Contact'
 const NAV = [
   { to:'/', label:'Tổng quan', icon:'' },
   { to:'/theory', label:'Lý thuyết', icon:'' },
-  { to:'/lab', label:'Lab thực hành', icon:'🧪' },
+  { to:'/lab', label:'Lab thực hành', icon:'' },
   { to:'/topology', label:'Topology Viewer', icon:'' },
   { to:'/quiz', label:'Trắc nghiệm', icon:'' },
   { to:'/exercises', label:'Bài tập', icon:'' },
