@@ -19,7 +19,7 @@ export default function Theory() {
 
   return (
     <div>
-      <PageHdr icon="📖" title="Lý thuyết" sub={`${chapters.length} chương — SDN cơ bản đến nâng cao`}/>
+      <PageHdr icon="" title="Lý thuyết" sub={`${chapters.length} chương — SDN cơ bản đến nâng cao`}/>
 
       {/* Mobile: horizontal chapter scroll */}
       <div className="theory-chap-scroll">
