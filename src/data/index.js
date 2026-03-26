@@ -11,7 +11,7 @@ export const instructor = {
 
 export const chapters = [
   {
-    id:'c1', n:1, icon:'🌐', color:'#00d4ff', diff:'beginner', time:'3 giờ',
+    id:'c1', n:1, icon:'', color:'#00d4ff', diff:'beginner', time:'3 giờ',
     title:'Giới thiệu SDN & Mininet',
     sections:[
       { id:'s1-1', title:'SDN là gì?', md:`
@@ -117,7 +117,7 @@ OpenFlow là giao thức **southbound** chuẩn để Controller giao tiếp v�
     ]
   },
   {
-    id:'c2', n:2, icon:'⚙️', color:'#00e676', diff:'beginner', time:'2 giờ',
+    id:'c2', n:2, icon:'', color:'#00e676', diff:'beginner', time:'2 giờ',
     title:'Cài đặt & Cấu hình Môi trường',
     sections:[
       { id:'s2-1', title:'Yêu cầu hệ thống', md:`
@@ -230,7 +230,7 @@ $ sudo pip3 install networkx matplotlib numpy flask requests
     ]
   },
   {
-    id:'c3', n:3, icon:'💻', color:'#ffab40', diff:'beginner', time:'2.5 giờ',
+    id:'c3', n:3, icon:'', color:'#ffab40', diff:'beginner', time:'2.5 giờ',
     title:'Mininet CLI — Lệnh cơ bản',
     sections:[
       { id:'s3-1', title:'Các lệnh quản lý', md:`
@@ -358,7 +358,7 @@ $ sudo mn -x
     ]
   },
   {
-    id:'c4', n:4, icon:'🗺️', color:'#c792ea', diff:'intermediate', time:'4 giờ',
+    id:'c4', n:4, icon:'', color:'#c792ea', diff:'intermediate', time:'4 giờ',
     title:'Xây dựng Topology Mạng',
     sections:[
       { id:'s4-1', title:'Topology có sẵn', md:`
@@ -520,7 +520,7 @@ net.addLink(s1, s2,
     ]
   },
   {
-    id:'c5', n:5, icon:'🐍', color:'#00d4ff', diff:'intermediate', time:'4 giờ',
+    id:'c5', n:5, icon:'', color:'#00d4ff', diff:'intermediate', time:'4 giờ',
     title:'Python API — Lập trình Mininet',
     sections:[
       { id:'s5-1', title:'API Reference', md:`
@@ -664,7 +664,7 @@ if __name__ == '__main__':
     ]
   },
   {
-    id:'c6', n:6, icon:'🎛️', color:'#ff5370', diff:'intermediate', time:'5 giờ',
+    id:'c6', n:6, icon:'', color:'#ff5370', diff:'intermediate', time:'5 giờ',
     title:'OpenFlow & SDN Controller',
     sections:[
       { id:'s6-1', title:'Kết nối Controller', md:`
@@ -841,7 +841,7 @@ requests.post(f'{RYU}/stats/flowentry/add', json=flow)
     ]
   },
   {
-    id:'c7', n:7, icon:'📊', color:'#00e676', diff:'intermediate', time:'3 giờ',
+    id:'c7', n:7, icon:'', color:'#00e676', diff:'intermediate', time:'3 giờ',
     title:'Kiểm tra Hiệu suất Mạng',
     sections:[
       { id:'s7-1', title:'Công cụ đo hiệu suất', md:`
@@ -957,7 +957,7 @@ def measure_performance(net, pairs=None):
     ]
   },
   {
-    id:'c8', n:8, icon:'☁️', color:'#ffcb6b', diff:'advanced', time:'5 giờ',
+    id:'c8', n:8, icon:'', color:'#ffcb6b', diff:'advanced', time:'5 giờ',
     title:'ONOS & OpenDaylight',
     sections:[
       { id:'s8-1', title:'ONOS Controller', md:`
@@ -1083,7 +1083,7 @@ $ curl -u admin:admin -X PUT \\
     ]
   },
   {
-    id:'c9', n:9, icon:'🚀', color:'#c792ea', diff:'advanced', time:'6 giờ',
+    id:'c9', n:9, icon:'', color:'#c792ea', diff:'advanced', time:'6 giờ',
     title:'Kịch bản Nâng cao',
     sections:[
       { id:'s9-1', title:'Network Slicing', md:`
@@ -1238,7 +1238,7 @@ mininet> h1 iperf3 -c 10.0.0.10 -P 8 -t 30
     ]
   },
   {
-    id:'c10', n:10, icon:'🎓', color:'#ff9800', diff:'advanced', time:'8 giờ',
+    id:'c10', n:10, icon:'', color:'#ff9800', diff:'advanced', time:'8 giờ',
     title:'Dự án Thực tế & Đề thi',
     sections:[
       { id:'s10-1', title:'Dự án: Campus Network', md:`
