@@ -12,27 +12,23 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Setup Node 22
-        uses: actions/setup-node@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: '22'
 
       - name: Install
         run: npm install
 
-      - name: Build
+      - name: Build for GitHub Pages
         run: npm run build
         env:
-          CI: false
+          VITE_BASE: /mininet/
 
-      - name: Add .nojekyll
-        run: touch ./dist/.nojekyll
+      - run: touch ./dist/.nojekyll
 
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v4
+      - uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
