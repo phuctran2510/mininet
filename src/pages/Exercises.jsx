@@ -16,7 +16,7 @@ export default function Exercises() {
 
   return (
     <div className="fu">
-      <PageHdr icon="✏️" title="Bài tập thực hành" sub={`${ALL_EX.length} bài tập — từ cơ bản đến nâng cao`}/>
+      <PageHdr icon="" title="Bài tập thực hành" sub={`${ALL_EX.length} bài tập — từ cơ bản đến nâng cao`}/>
       <div className="tabs" style={{marginBottom:'1rem'}}>
         {DIFFS.map(d => <button key={d} className={`tab${diff===d?' active':''}`} onClick={() => setDiff(d)}>{d}</button>)}
       </div>

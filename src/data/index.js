@@ -5,8 +5,8 @@ export const instructor = {
   university: 'Đại học Đà Lạt (DLU)',
   dept: 'Khoa Công nghệ Thông tin',
   avatar: 'PT',
-  bio: 'Giảng viên chuyên ngành Mạng Máy Tính & SDN. Nghiên cứu về Software-Defined Networking, Cloud Networking và Network Virtualization.',
-  expertise: ['SDN / OpenFlow', 'Mạng Máy Tính', 'Cloud Networking', 'Linux Networking', 'Network Security'],
+  bio: 'Giảng viên chuyên ngành Mạng Máy Tính & SDN. Nghiên cứu về Software-Defined Networking, Edge Networking và Internet of Things.',
+  expertise: ['SDN / OpenFlow', 'Mạng Máy Tính', 'Edge Networking', 'Linux Networking', 'Network Security', 'IoT', 'Edge Ai'],
 }
 
 export const chapters = [
