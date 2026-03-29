@@ -143,3 +143,12 @@ tr:last-child td{border-bottom:none}
   table{font-size:.76rem!important}
   th,td{padding:.45rem .6rem!important}
 }
+input:focus {
+  border: 1px solid #22c55e;
+  box-shadow: 0 0 0 2px rgba(34,197,94,0.3);
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(34,197,94,0.4);
+}
