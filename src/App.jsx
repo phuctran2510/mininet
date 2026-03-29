@@ -11,7 +11,7 @@ import Exam from './pages/Exam'
 import Glossary from './pages/Glossary'
 import Resources from './pages/Resources'
 import Contact from './pages/Contact'
-
+import './index.css'
 const NAV = [
   { to:'/', label:'Tổng quan', icon:'' },
   { to:'/theory', label:'Lý thuyết', icon:'' },
