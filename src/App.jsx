@@ -131,7 +131,7 @@ function Login({ onLogin }) {
         <div style={S.left}>
           <div style={S.badge}>SDN · CNTT · DLU</div>
           <div style={S.logo}>
-            <span style={S.logoAccent}>Mininet</span>
+            <span style={S.logoAccent}>SDN</span>
             <span style={S.logoMain}>EDU</span>
           </div>
           <p style={S.tagline}>Hệ thống học tập & nghiên cứu<br/>Software Defined Networking</p>
