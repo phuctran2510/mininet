@@ -1501,16 +1501,151 @@ export const glossary = [
 ]
 
 export const projects = [
-  {id:'p1',level:'Cơ bản',color:'#00e676',title:'Mạng 3-switch tuyến tính',time:'2 giờ',desc:'Tạo linear topology 3 switch, 6 host. Kiểm tra kết nối, phân tích flow table, vẽ sơ đồ.',skills:['CLI','OVS','Topology'],deliver:['topology.py','flow_analysis.txt','diagram']},
-  {id:'p2',level:'Cơ bản',color:'#00e676',title:'Web server trong Mininet',time:'2 giờ',desc:'Apache/Nginx trên h1, truy cập từ h2. Đo throughput với ab tool, so sánh với iperf3.',skills:['HTTP','iperf3','CLI'],deliver:['script.sh','benchmark.csv']},
-  {id:'p3',level:'Cơ bản',color:'#00e676',title:'Phân tích giao thức',time:'3 giờ',desc:'Dùng tcpdump capture ARP, ICMP, TCP handshake trong Mininet. Phân tích với Wireshark.',skills:['tcpdump','Wireshark','Protocols'],deliver:['capture.pcap','analysis.pdf']},
-  {id:'p4',level:'Trung bình',color:'#00d4ff',title:'SDN L2 Learning Switch',time:'4 giờ',desc:'Viết Ryu controller L2 learning switch. So sánh hành vi với hub (flood all) vs switch (unicast).',skills:['Ryu','OpenFlow','Python'],deliver:['l2_switch.py','test_script.py','report.md']},
-  {id:'p5',level:'Trung bình',color:'#00d4ff',title:'QoS & Traffic Shaping',time:'4 giờ',desc:'Cấu hình bandwidth khác nhau cho từng host. Verify với iperf3, tạo đồ thị matplotlib.',skills:['TCLink','iperf3','QoS','Python'],deliver:['qos_topo.py','results.csv','plot.png']},
-  {id:'p6',level:'Trung bình',color:'#00d4ff',title:'SDN Firewall cơ bản',time:'5 giờ',desc:'Ryu app: firewall chặn traffic giữa subnets. Implement allow/deny rules, log violations.',skills:['Ryu','OpenFlow','Security'],deliver:['firewall.py','test_cases.py','security_report.md']},
-  {id:'p7',level:'Nâng cao',color:'#c792ea',title:'Fat Tree k=4 với ECMP',time:'8 giờ',desc:'Fat Tree Data Center + ECMP load balancing. Đo bisection bandwidth, so sánh với single path.',skills:['Fat Tree','ECMP','Ryu','Performance'],deliver:['fat_tree.py','ecmp_ctrl.py','benchmark.md']},
-  {id:'p8',level:'Nâng cao',color:'#c792ea',title:'Campus SDN Network',time:'20 giờ',desc:'Mạng campus 3 tòa nhà, VLAN phân loại, QoS, failover <3s, Flask monitoring dashboard.',skills:['Multi-VLAN','QoS','Failover','Flask','ONOS'],deliver:['Toàn bộ source','Dashboard','Tài liệu kỹ thuật','Demo video']},
-  {id:'p9',level:'Nâng cao',color:'#ffab40',title:'SDN DDoS Defense',time:'16 giờ',desc:'Phát hiện DDoS từ flow statistics, tự động block nguồn tấn công, alert và log.',skills:['Security','Ryu','Statistics','ML optional'],deliver:['detection.py','mitigation.py','research_report.pdf']},
-   {id:'p10',level:'Nâng cao',color:'#5e10c3',title:'SDN DDoS Defense',time:'16 giờ',desc:'Phát hiện DDoS từ flow statistics, tự động block nguồn tấn công, alert và log.',skills:['Security','Ryu','Statistics','ML optional'],deliver:['detection.py','mitigation.py','research_report.pdf']},
+  // ── CƠ BẢN (p1–p5) ──────────────────────────────────────────────────────
+  {
+    id: 'p1', level: 'Cơ bản', color: '#00e676',
+    title: 'Mạng 3-switch tuyến tính', time: '2 giờ',
+    desc: 'Tạo linear topology 3 switch, 6 host. Kiểm tra kết nối, phân tích flow table, vẽ sơ đồ.',
+    skills: ['CLI', 'OVS', 'Topology'],
+    deliver: ['topology.py', 'flow_analysis.txt', 'diagram'],
+  },
+  {
+    id: 'p2', level: 'Cơ bản', color: '#00e676',
+    title: 'Web server trong Mininet', time: '2 giờ',
+    desc: 'Apache/Nginx trên h1, truy cập từ h2. Đo throughput với ab tool, so sánh với iperf3.',
+    skills: ['HTTP', 'iperf3', 'CLI'],
+    deliver: ['script.sh', 'benchmark.csv'],
+  },
+  {
+    id: 'p3', level: 'Cơ bản', color: '#00e676',
+    title: 'Phân tích giao thức ARP/ICMP/TCP', time: '3 giờ',
+    desc: 'Dùng tcpdump capture ARP, ICMP, TCP handshake trong Mininet. Phân tích với Wireshark.',
+    skills: ['tcpdump', 'Wireshark', 'Protocols'],
+    deliver: ['capture.pcap', 'analysis.pdf'],
+  },
+  {
+    id: 'p4', level: 'Cơ bản', color: '#00e676',
+    title: 'Ping mesh & latency map', time: '2 giờ',
+    desc: 'Tạo tree topology depth=2 fanout=3. Đo RTT toàn bộ cặp host, vẽ heatmap latency bằng matplotlib.',
+    skills: ['CLI', 'Python', 'matplotlib'],
+    deliver: ['ping_mesh.py', 'latency_heatmap.png'],
+  },
+  {
+    id: 'p5', level: 'Cơ bản', color: '#00e676',
+    title: 'Custom topology với Python API', time: '3 giờ',
+    desc: 'Dùng Mininet Python API tạo topology hình sao 1 switch trung tâm, 8 host với IP tĩnh. Kiểm tra pingall.',
+    skills: ['Python API', 'Mininet', 'IP config'],
+    deliver: ['star_topo.py', 'test_connectivity.sh'],
+  },
+
+  // ── TRUNG BÌNH (p6–p13) ──────────────────────────────────────────────────
+  {
+    id: 'p6', level: 'Trung bình', color: '#00d4ff',
+    title: 'SDN L2 Learning Switch', time: '4 giờ',
+    desc: 'Viết Ryu controller L2 learning switch. So sánh hành vi với hub (flood all) vs switch (unicast).',
+    skills: ['Ryu', 'OpenFlow', 'Python'],
+    deliver: ['l2_switch.py', 'test_script.py', 'report.md'],
+  },
+  {
+    id: 'p7', level: 'Trung bình', color: '#00d4ff',
+    title: 'QoS & Traffic Shaping', time: '4 giờ',
+    desc: 'Cấu hình bandwidth khác nhau cho từng host. Verify với iperf3, tạo đồ thị matplotlib.',
+    skills: ['TCLink', 'iperf3', 'QoS', 'Python'],
+    deliver: ['qos_topo.py', 'results.csv', 'plot.png'],
+  },
+  {
+    id: 'p8', level: 'Trung bình', color: '#00d4ff',
+    title: 'SDN Firewall cơ bản', time: '5 giờ',
+    desc: 'Ryu app: firewall chặn traffic giữa subnets. Implement allow/deny rules, log violations.',
+    skills: ['Ryu', 'OpenFlow', 'Security'],
+    deliver: ['firewall.py', 'test_cases.py', 'security_report.md'],
+  },
+  {
+    id: 'p9', level: 'Trung bình', color: '#00d4ff',
+    title: 'VLAN segmentation với OVS', time: '4 giờ',
+    desc: 'Phân chia 8 host thành 3 VLAN trên cùng switch. Kiểm tra cô lập traffic, cấu hình trunk port.',
+    skills: ['OVS', 'VLAN', 'OpenFlow'],
+    deliver: ['vlan_topo.py', 'vlan_test.sh', 'vlan_report.md'],
+  },
+  {
+    id: 'p10', level: 'Trung bình', color: '#00d4ff',
+    title: 'Link failure & fast failover', time: '5 giờ',
+    desc: 'Tạo topology dual-path, giả lập đứt link, đo thời gian khôi phục kết nối với OpenFlow Fast-Failover group.',
+    skills: ['Ryu', 'OpenFlow Groups', 'Failover'],
+    deliver: ['failover_topo.py', 'failover_ctrl.py', 'failover_test.py'],
+  },
+  {
+    id: 'p11', level: 'Trung bình', color: '#00d4ff',
+    title: 'REST API controller với Ryu', time: '5 giờ',
+    desc: 'Expose Ryu REST API để thêm/xoá flow rules qua HTTP. Viết client Python tự động hoá quản lý mạng.',
+    skills: ['Ryu REST', 'Flask', 'Python', 'API'],
+    deliver: ['rest_ctrl.py', 'api_client.py', 'api_docs.md'],
+  },
+  {
+    id: 'p12', level: 'Trung bình', color: '#00d4ff',
+    title: 'Network monitoring dashboard', time: '6 giờ',
+    desc: 'Thu thập port stats từ OVS bằng sFlow/SNMP, hiển thị real-time trên Flask dashboard với Chart.js.',
+    skills: ['sFlow', 'Flask', 'Chart.js', 'SNMP'],
+    deliver: ['monitor.py', 'dashboard/', 'README.md'],
+  },
+  {
+    id: 'p13', level: 'Trung bình', color: '#00d4ff',
+    title: 'Multicast routing trong SDN', time: '5 giờ',
+    desc: 'Implement OpenFlow multicast group table. So sánh hiệu quả flooding vs tree-based multicast.',
+    skills: ['OpenFlow Groups', 'Ryu', 'Multicast'],
+    deliver: ['multicast_ctrl.py', 'benchmark.py', 'comparison.md'],
+  },
+
+  // ── NÂNG CAO (p14–p20) ──────────────────────────────────────────────────
+  {
+    id: 'p14', level: 'Nâng cao', color: '#c792ea',
+    title: 'Fat Tree k=4 với ECMP', time: '8 giờ',
+    desc: 'Fat Tree Data Center + ECMP load balancing. Đo bisection bandwidth, so sánh với single path.',
+    skills: ['Fat Tree', 'ECMP', 'Ryu', 'Performance'],
+    deliver: ['fat_tree.py', 'ecmp_ctrl.py', 'benchmark.md'],
+  },
+  {
+    id: 'p15', level: 'Nâng cao', color: '#c792ea',
+    title: 'SDN DDoS Detection & Mitigation', time: '10 giờ',
+    desc: 'Phát hiện DDoS từ flow statistics bằng entropy analysis, tự động block nguồn tấn công, sinh alert.',
+    skills: ['Security', 'Ryu', 'Statistics', 'Entropy'],
+    deliver: ['detection.py', 'mitigation.py', 'research_report.pdf'],
+  },
+  {
+    id: 'p16', level: 'Nâng cao', color: '#c792ea',
+    title: 'Deep Reinforcement Learning routing', time: '12 giờ',
+    desc: 'DQN agent học chính sách định tuyến tối ưu trong môi trường mạng động mô phỏng với Mininet+Gym.',
+    skills: ['PyTorch', 'DQN', 'Ryu', 'OpenAI Gym'],
+    deliver: ['drl_agent.py', 'mininet_env.py', 'training_log.csv', 'report.pdf'],
+  },
+  {
+    id: 'p17', level: 'Nâng cao', color: '#c792ea',
+    title: 'Intent-based networking với NLP', time: '12 giờ',
+    desc: 'Pipeline NLP nhận câu lệnh tiếng Anh ("block traffic from 10.0.0.1"), dịch thành OpenFlow rules tự động.',
+    skills: ['NLP', 'spaCy', 'Ryu', 'OpenFlow'],
+    deliver: ['intent_parser.py', 'rule_generator.py', 'demo_video.mp4'],
+  },
+  {
+    id: 'p18', level: 'Nâng cao', color: '#c792ea',
+    title: 'Campus SDN network đầy đủ', time: '20 giờ',
+    desc: 'Mạng campus 3 tòa nhà, VLAN phân loại, QoS, failover <3s, Flask monitoring dashboard.',
+    skills: ['Multi-VLAN', 'QoS', 'Failover', 'Flask', 'ONOS'],
+    deliver: ['Toàn bộ source', 'Dashboard', 'Tài liệu kỹ thuật', 'Demo video'],
+  },
+  {
+    id: 'p19', level: 'Nâng cao', color: '#c792ea',
+    title: 'Network Digital Twin', time: '15 giờ',
+    desc: 'Xây dựng digital twin chính xác của topology thực trên Mininet, đồng bộ trạng thái real-time, dùng để thử nghiệm thay đổi an toàn.',
+    skills: ['Mininet', 'Python', 'REST', 'Kafka'],
+    deliver: ['twin_sync.py', 'shadow_net.py', 'accuracy_report.md'],
+  },
+  {
+    id: 'p20', level: 'Nâng cao', color: '#c792ea',
+    title: 'P4 programmable dataplane với BMv2', time: '16 giờ',
+    desc: 'Viết P4 program tùy chỉnh header processing, compile với p4c, chạy trên BMv2 software switch trong Mininet.',
+    skills: ['P4', 'BMv2', 'p4c', 'Python'],
+    deliver: ['basic.p4', 'control_plane.py', 'p4_report.pdf'],
+  },
 ]
 
 export const resources = [
