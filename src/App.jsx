@@ -63,7 +63,7 @@ function Sidebar({ open, onClose }) {
           <div style={{display:'flex',alignItems:'center',gap:'.6rem'}}>
             <div style={{width:34,height:34,borderRadius:8,background:'linear-gradient(135deg,var(--acc),var(--grn))',display:'flex',alignItems:'center',justifyContent:'center',fontFamily:'var(--fm)',fontWeight:800,fontSize:'1rem',color:'#000',flexShrink:0}}>M</div>
             <div>
-              <div style={{fontFamily:'var(--fm)',fontWeight:800,fontSize:'.9rem',color:'var(--txt)'}}>Mininet EDU</div>
+              <div style={{fontFamily:'var(--fm)',fontWeight:800,fontSize:'.9rem',color:'var(--txt)'}}>SDN EDU</div>
               <div style={{fontSize:'.63rem',color:'var(--txt3)',fontFamily:'var(--fc)'}}>SDN Learning Platform</div>
             </div>
           </div>
@@ -216,7 +216,7 @@ function Topbar({ onMenu }) {
           {cur.label}
         </span>
       </div>
-      <div style={{fontSize:'.62rem',color:'var(--txt3)',fontFamily:'var(--fc)',flexShrink:0}}>Mininet EDU</div>
+      <div style={{fontSize:'.62rem',color:'var(--txt3)',fontFamily:'var(--fc)',flexShrink:0}}>SDN EDU</div>
     </div>
   )
 }
