@@ -1510,6 +1510,7 @@ export const projects = [
   {id:'p7',level:'Nâng cao',color:'#c792ea',title:'Fat Tree k=4 với ECMP',time:'8 giờ',desc:'Fat Tree Data Center + ECMP load balancing. Đo bisection bandwidth, so sánh với single path.',skills:['Fat Tree','ECMP','Ryu','Performance'],deliver:['fat_tree.py','ecmp_ctrl.py','benchmark.md']},
   {id:'p8',level:'Nâng cao',color:'#c792ea',title:'Campus SDN Network',time:'20 giờ',desc:'Mạng campus 3 tòa nhà, VLAN phân loại, QoS, failover <3s, Flask monitoring dashboard.',skills:['Multi-VLAN','QoS','Failover','Flask','ONOS'],deliver:['Toàn bộ source','Dashboard','Tài liệu kỹ thuật','Demo video']},
   {id:'p9',level:'Nâng cao',color:'#ffab40',title:'SDN DDoS Defense',time:'16 giờ',desc:'Phát hiện DDoS từ flow statistics, tự động block nguồn tấn công, alert và log.',skills:['Security','Ryu','Statistics','ML optional'],deliver:['detection.py','mitigation.py','research_report.pdf']},
+   {id:'p10',level:'Nâng cao',color:'#5e10c3',title:'SDN DDoS Defense',time:'16 giờ',desc:'Phát hiện DDoS từ flow statistics, tự động block nguồn tấn công, alert và log.',skills:['Security','Ryu','Statistics','ML optional'],deliver:['detection.py','mitigation.py','research_report.pdf']},
 ]
 
 export const resources = [
