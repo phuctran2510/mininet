@@ -29,14 +29,14 @@ export default function Home() {
         </div>
 
         <h1 style={{fontFamily:'var(--fm)',fontSize:'clamp(1.7rem,5vw,2.7rem)',fontWeight:800,lineHeight:1.1,marginBottom:'.75rem'}}>
-          <span className="gt">Mininet EDU</span><br/>
+          <span className="gt">SDN EDU</span><br/>
           <span style={{color:'var(--txt3)',fontSize:'.48em',fontWeight:400,fontFamily:'var(--fd)'}}>
             Giáo trình Mạng Máy Tính & SDN Toàn tập
           </span>
         </h1>
 
         <p style={{color:'var(--txt2)',maxWidth:520,margin:'0 auto 1.6rem',fontSize:'.9rem',lineHeight:1.8}}>
-          Từ cài đặt Mininet cơ bản đến triển khai SDN nâng cao — lý thuyết đầy đủ, lab có hướng dẫn, topology tương tác, trắc nghiệm và {projects.length} dự án thực tế.
+          Từ cài đặt từ cơ bản đến triển khai SDN nâng cao — lý thuyết đầy đủ, lab có hướng dẫn, topology tương tác, trắc nghiệm và {projects.length} dự án thực tế.
         </p>
 
         <div style={{display:'flex',gap:'.6rem',justifyContent:'center',flexWrap:'wrap'}}>
